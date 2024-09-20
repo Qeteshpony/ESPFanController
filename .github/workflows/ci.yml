@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "pcb/*.kicad_*"
+      - "kibot.yml"
+      - ".github/workflows/ci.yml"
+
+jobs:
+  check:
+    name: Check
+    uses: Qeteshpony/reusable-workflows/.github/workflows/kibot-check.yml@main
+    with:
+      config-file: kibot.yml
+      board-file: pcb/ESPFanController.kicad_pcb
+
+  docs:
+    name: Docs
+    uses: Qeteshpony/reusable-workflows/.github/workflows/kibot-docs.yml@main
+    with:
+      config-file: kibot.yml
+      board-file: pcb/ESPFanController.kicad_pcb

@@ -1,0 +1,16 @@
+name: Pull Request
+
+on:
+  pull_request:
+    paths:
+      - "pcb/*.kicad_*"
+      - "kibot.yml"
+      - ".github/workflows/pull-request.yml"
+
+jobs:
+  check:
+    name: Check
+    uses: Qeteshpony/reusable-workflows/.github/workflows/kibot-check.yml@main
+    with:
+      config-file: kibot.yml
+      board-file: pcb/ESPFanController.kicad_pcb

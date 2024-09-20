@@ -1,0 +1,13 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    uses: Qeteshpony/reusable-workflows/.github/workflows/release-please.yml@main
+    with:
+      config-file: release.kibot.yml
+      board-file: pcb/ESPFanController.kicad_pcb

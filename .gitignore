@@ -1,0 +1,12 @@
+.DS_Store
+**/*-backups/**
+*-bak
+*.bak
+fp-info-cache
+*.stp
+*.step
+*.kicad_prl
+~*.lck
+\#auto_saved_files\#
+_autosave-*
+pcb/production/*
