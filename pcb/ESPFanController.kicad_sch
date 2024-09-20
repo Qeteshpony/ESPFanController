@@ -2942,6 +2942,16 @@
 	)
 	(wire
 		(pts
+			(xy 88.9 67.31) (xy 88.9 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10ecd69f-9768-4fb9-ab0f-e8debbf18af5")
+	)
+	(wire
+		(pts
 			(xy 203.2 92.71) (xy 205.74 92.71)
 		)
 		(stroke
@@ -2949,6 +2959,26 @@
 			(type default)
 		)
 		(uuid "1182faa3-e655-4a35-a94a-841d1e8b808a")
+	)
+	(wire
+		(pts
+			(xy 96.52 67.31) (xy 96.52 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1904459c-0ddb-4653-916e-6094f4878c14")
+	)
+	(wire
+		(pts
+			(xy 88.9 59.69) (xy 88.9 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1960c780-4c1b-45cf-aed7-e5ec427bf94c")
 	)
 	(wire
 		(pts
@@ -3252,6 +3282,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 59.69) (xy 96.52 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4e93216-ef09-454e-83b6-2b7d174b4003")
+	)
+	(wire
+		(pts
 			(xy 118.11 52.07) (xy 118.11 54.61)
 		)
 		(stroke
@@ -3514,6 +3554,17 @@
 		)
 		(uuid "187fa15e-66b8-4c67-82c2-62e5e41f01cb")
 	)
+	(label "RX"
+		(at 88.9 69.85 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "21590649-5dcf-45aa-8bbd-8f7bf32d7b28")
+	)
 	(label "PWM2"
 		(at 153.67 105.41 0)
 		(fields_autoplaced yes)
@@ -3568,6 +3619,17 @@
 			(justify left bottom)
 		)
 		(uuid "79f985d8-f543-4d97-8907-71da9f17be87")
+	)
+	(label "TX"
+		(at 96.52 69.85 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8d5515fa-93ac-48d0-8b31-8e1c11d9aca4")
 	)
 	(label "LED"
 		(at 153.67 102.87 0)
@@ -4174,6 +4236,76 @@
 			(project "ESPFanController"
 				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
 					(reference "#PWR015")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 88.9 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "402dca0c-82ff-4c37-8dcf-2808d55a87ed")
+		(property "Reference" "R7"
+			(at 91.44 63.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4k7"
+			(at 91.44 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+			(at 88.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 88.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 88.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86a1b255-48be-413d-926f-01c3edb32bf4")
+		)
+		(pin "2"
+			(uuid "8356cadc-8e44-424a-b17e-00981a02bb01")
+		)
+		(instances
+			(project ""
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -5146,6 +5278,138 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 88.9 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "99a36b6b-7665-442d-a6dd-c50a6970d61a")
+		(property "Reference" "#PWR023"
+			(at 88.9 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 88.9 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 88.9 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8927852c-477f-4060-97de-0260c85058b9")
+		)
+		(instances
+			(project "ESPFanController"
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 96.52 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9b951992-e85d-48ac-bd26-0769ced354b7")
+		(property "Reference" "#PWR024"
+			(at 96.52 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 96.52 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 96.52 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b1dc8443-a37b-4ae6-843c-f7e9a97c682a")
+		)
+		(instances
+			(project "ESPFanController"
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 69.85 134.62 0)
 		(unit 1)
@@ -5810,6 +6074,76 @@
 			(project "ESPFanController"
 				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
 					(reference "#PWR01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 96.52 64.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "d4e0d4d9-a4c3-45c0-bd2e-4597178c287d")
+		(property "Reference" "R8"
+			(at 99.06 63.4999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4k7"
+			(at 99.06 66.0399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "752ea568-ee87-49ee-8a9b-8093cf412b03")
+		)
+		(pin "2"
+			(uuid "bece78f6-0a32-4c81-a8e6-5148a3380769")
+		)
+		(instances
+			(project "ESPFanController"
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "R8")
 					(unit 1)
 				)
 			)
