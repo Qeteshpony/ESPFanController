@@ -1,0 +1,126 @@
+esphome:
+  name: rackfan
+  friendly_name: RackFan
+  project: 
+    name: "Qetesh.RackFanController"
+    version: "1.0.0"
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "encryptionkey"
+
+ota:
+  - platform: esphome
+    password: "otasecret"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+web_server:
+  
+# initialize PWM outputs
+output:
+  - platform: ledc
+    id: pwm1
+    pin: 32
+    frequency: 25000
+    min_power: 0.2
+    zero_means_zero: True
+    channel: 0
+  - platform: ledc
+    id: pwm2
+    pin: 25
+    frequency: 25000
+    min_power: 0.2
+    zero_means_zero: True
+    channel: 2
+  - platform: ledc
+    id: pwm3
+    pin: 27
+    frequency: 25000
+    min_power: 0.2
+    zero_means_zero: True
+    channel: 4
+
+# Map fan entities to outputs
+fan:  
+  - platform: speed
+    id: fan1
+    output: pwm1
+    name: "Fan 1"
+    restore_mode: RESTORE_DEFAULT_ON
+  - platform: speed
+    id: fan2
+    output: pwm2
+    name: "Fan 2"
+    restore_mode: RESTORE_DEFAULT_ON
+  - platform: speed
+    id: fan3
+    output: pwm3
+    name: "Fan 3"
+    restore_mode: RESTORE_DEFAULT_ON
+
+# Add tacho sensors    
+sensor:
+  - platform: pulse_counter
+    pin: 35
+    id: tacho1
+    name: "Tacho 1"
+    update_interval: 10s
+    unit_of_measurement: "RPM"
+    state_class: measurement
+    accuracy_decimals: 0
+    icon: "mdi:speedometer"
+    filters: 
+      - multiply: 0.5  # tacho signal triggers twice per rotation
+  - platform: pulse_counter
+    pin: 33
+    id: tacho2
+    name: "Tacho 2"
+    update_interval: 10s
+    unit_of_measurement: "RPM"
+    state_class: measurement
+    accuracy_decimals: 0
+    icon: "mdi:speedometer"
+    filters: 
+      - multiply: 0.5
+  - platform: pulse_counter
+    pin: 26
+    id: tacho3
+    name: "Tacho 3"
+    update_interval: 10s
+    unit_of_measurement: "RPM"
+    state_class: measurement
+    accuracy_decimals: 0
+    icon: "mdi:speedometer"
+    filters: 
+      - multiply: 0.5
+  - platform: wifi_signal
+    name: WiFi Signal Strength
+    update_interval: 60s
+
+# add some information about WiFi connection    
+text_sensor:
+  - platform: wifi_info
+    ip_address:
+      name: IP
+      icon: mdi:ip-network
+    ssid:
+      name: SSID
+      icon: mdi:access-point-network
+    mac_address:
+      name: MAC
+      icon: mdi:hexadecimal
+    bssid:
+      name: BSSID
+      icon: mdi:access-point-network
