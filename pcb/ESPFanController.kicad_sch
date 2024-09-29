@@ -3005,10 +3005,6 @@
 		(uuid "f0cddea8-5157-4c2f-a6ab-d9391c785b34")
 	)
 	(no_connect
-		(at 153.67 100.33)
-		(uuid "f66b8c46-b737-4a57-b3b3-824cb83b415f")
-	)
-	(no_connect
 		(at 123.19 97.79)
 		(uuid "fbfda65c-55f2-4e1c-9a4e-16ededc270bf")
 	)
@@ -3468,6 +3464,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 121.92) (xy 81.28 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2da1fd7-f06c-4e39-9f1a-ce692d9e7355")
+	)
+	(wire
+		(pts
 			(xy 205.74 92.71) (xy 208.28 92.71)
 		)
 		(stroke
@@ -3558,6 +3564,16 @@
 	)
 	(wire
 		(pts
+			(xy 81.28 129.54) (xy 81.28 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e78086e5-dce0-43cd-a424-6594eac599e3")
+	)
+	(wire
+		(pts
 			(xy 40.64 101.6) (xy 40.64 99.06)
 		)
 		(stroke
@@ -3595,6 +3611,16 @@
 			(type default)
 		)
 		(uuid "f7056088-1aa5-42c9-91cd-0f003f1b09e9")
+	)
+	(wire
+		(pts
+			(xy 81.28 137.16) (xy 81.28 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7f36b1c-6b41-4081-a39f-07f18f83d351")
 	)
 	(wire
 		(pts
@@ -3727,7 +3753,18 @@
 		)
 		(uuid "8d5515fa-93ac-48d0-8b31-8e1c11d9aca4")
 	)
-	(label "LED"
+	(label "Yellow"
+		(at 153.67 100.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "91f82852-988d-4982-801d-3b4c6543523e")
+	)
+	(label "Red"
 		(at 153.67 102.87 0)
 		(fields_autoplaced yes)
 		(effects
@@ -3793,7 +3830,7 @@
 		)
 		(uuid "d012c663-ad3d-41fa-8edc-a8f524025ffa")
 	)
-	(label "LED"
+	(label "Red"
 		(at 69.85 121.92 90)
 		(fields_autoplaced yes)
 		(effects
@@ -3814,6 +3851,17 @@
 			(justify left bottom)
 		)
 		(uuid "d860e3ef-db9f-4c14-8cb3-51efd4139a80")
+	)
+	(label "Yellow"
+		(at 81.28 121.92 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e0d0a29f-0515-4bff-a9fc-047a0ab5e156")
 	)
 	(label "PWM3"
 		(at 153.67 110.49 0)
@@ -3969,6 +4017,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 165.1 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "9968c970-1ded-41d1-8c23-cf6d61f80c82")
 		)
@@ -4037,6 +4094,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C1525"
+			(at 133.35 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4925271d-688d-4e8e-aa90-a35e3bd7ca12")
 		)
@@ -4047,6 +4113,85 @@
 			(project ""
 				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED_Small")
+		(at 81.28 127 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "165455ae-52fe-4749-9624-f289967f142a")
+		(property "Reference" "D2"
+			(at 83.82 125.6664 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Yellow"
+			(at 83.82 128.2064 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+			(at 81.28 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 127 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode, small symbol"
+			(at 81.28 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C72038"
+			(at 81.28 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5f05b35e-cae1-496f-b020-64945bd3a186")
+		)
+		(pin "2"
+			(uuid "d96616b1-4633-4898-a907-c2a965c9fc98")
+		)
+		(instances
+			(project "ESPFanController"
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -4252,6 +4397,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C15525"
+			(at 133.35 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d6aa9109-0293-45cd-83ea-84411d06635a")
 		)
@@ -4314,6 +4468,15 @@
 			)
 		)
 		(property "Description" "Push button switch, generic, two pins"
+			(at 165.1 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C318884"
 			(at 165.1 69.85 0)
 			(effects
 				(font
@@ -4458,6 +4621,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25900"
+			(at 88.9 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "86a1b255-48be-413d-926f-01c3edb32bf4")
 		)
@@ -4520,6 +4692,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 205.74 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 205.74 125.73 0)
 			(effects
 				(font
@@ -4753,6 +4934,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 81.28 139.7 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6319167f-7f8e-41bd-9bf0-a0f64643bc81")
+		(property "Reference" "#PWR027"
+			(at 81.28 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 81.28 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 81.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 81.28 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "09516aa4-77e3-4b5b-b4dd-eccf38479eb9")
+		)
+		(instances
+			(project "ESPFanController"
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "#PWR027")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+12V")
 		(at 215.9 44.45 0)
 		(unit 1)
@@ -4873,6 +5120,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 118.11 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1ddb48b0-0723-47a2-ada5-c20f06fe0631")
 		)
@@ -4943,6 +5199,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25744"
+			(at 205.74 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a841bc0f-3bde-4365-a392-f0f4a3fc2374")
 		)
@@ -5005,6 +5270,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
+			(at 69.85 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7171"
 			(at 69.85 93.98 0)
 			(effects
 				(font
@@ -5421,6 +5695,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C6186"
+			(at 59.69 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "a236fd03-b05f-462e-8f00-cc619aff84f5")
 		)
@@ -5758,6 +6041,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25130"
+			(at 69.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1ce65783-6cdf-40f4-a298-966a985bae8f")
 		)
@@ -5820,6 +6112,15 @@
 			)
 		)
 		(property "Description" "Polarized capacitor, small symbol"
+			(at 49.53 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7171"
 			(at 49.53 93.98 0)
 			(effects
 				(font
@@ -6375,6 +6676,85 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
+		(at 81.28 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d052efcc-6531-486a-926f-36a8853f7898")
+		(property "Reference" "R9"
+			(at 83.82 133.3499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "680R"
+			(at 83.82 135.8899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 81.28 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 81.28 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25130"
+			(at 81.28 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c10f6779-5549-4b8c-8395-28d77a3212d2")
+		)
+		(pin "1"
+			(uuid "4b769a55-6822-4d92-b877-8f6db7f59750")
+		)
+		(instances
+			(project "ESPFanController"
+				(path "/2bd25ec8-6cbd-4a4f-981f-5c6c503ec968"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
 		(at 96.52 64.77 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -6420,6 +6800,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 96.52 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25900"
 			(at 96.52 64.77 0)
 			(effects
 				(font
@@ -6629,7 +7018,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C131334"
 			(at 69.85 55.88 0)
 			(effects
 				(font
@@ -6706,6 +7095,15 @@
 			)
 		)
 		(property "Description" "RF Module, ESP32-D0WDQ6 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 2.7-3.6V, onboard antenna, SMD"
+			(at 138.43 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C701341"
 			(at 138.43 92.71 0)
 			(effects
 				(font
@@ -6992,7 +7390,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED_Small"
+		(property "Value" "Red"
 			(at 72.39 128.2064 90)
 			(effects
 				(font
@@ -7020,6 +7418,15 @@
 			)
 		)
 		(property "Description" "Light emitting diode, small symbol"
+			(at 69.85 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2286"
 			(at 69.85 127 0)
 			(effects
 				(font
@@ -7222,6 +7629,15 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 205.74 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25744"
 			(at 205.74 87.63 0)
 			(effects
 				(font
