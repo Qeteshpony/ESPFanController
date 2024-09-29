@@ -6,3 +6,6 @@
 
 [Hardware Documentation](https://qeteshpony.github.io/ESPFanController)
 
+Controller for up to three 5V or 12V PWM-Fans with an ESP32 at it's core 
+
+The included yaml file is my config for ESP-Home but of course this can also be programmed in any compatible language you like... 
