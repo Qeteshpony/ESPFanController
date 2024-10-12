@@ -5,7 +5,6 @@ preflight:
   run_erc: false
   run_drc: false
   check_zone_fills: false
-  ignore_unconnected: false
   set_text_variables:
     - variable: "VERSION"
       command: git rev-parse --short HEAD
@@ -29,25 +28,16 @@ outputs:
     type: pdf_sch_print
     dir: .
 
-  - name: 'print_front'
-    comment: "Print F.Cu"
-    type: pdf_pcb_print
+  - name: 'print_pcb'
+    comment: "Print Layers to PDF"
+    type: pcb_print
     dir: .
-    layers:
-      - layer: F.Cu
-      - layer: F.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.1
-
-  - name: 'print_bottom'
-    comment: "Print B.Cu"
-    type: pdf_pcb_print
-    dir: .
-    layers:
-      - layer: B.Cu
-      - layer: B.Silkscreen
-      - layer: Edge.Cuts
-      - layer: User.1
+    options:
+      force_edge_cuts: true
+      pages:
+        - layers: [F.Cu, F.Silkscreen, User.1]
+        - layers: [B.Cu, B.Silkscreen, User.1]
+          mirror: true
 
   - name: 'interactive_bom'
     comment: "Interactive Bill of Materials (HTML)"
@@ -83,15 +73,27 @@ outputs:
       metric_units: true
       origin: grid
 
-  - name: basic_render_3d_30deg
-    comment: "3D view from 30 degrees"
+  - name: basic_render_3d_top
+    comment: "3D top view"
     type: render_3d
     dir: 3D
-    output_id: 30deg
+    output_id: 3Dtop
     options:
       ray_tracing: true
+      view: top
       rotate_x: 3
-      rotate_z: -2
+      rotate_z: -1
+
+  - name: basic_render_3d_bottom
+    comment: "3D bottom view"
+    type: render_3d
+    dir: 3D
+    output_id: 3Dbottom
+    options:
+      ray_tracing: true
+      view: bottom
+      rotate_x: 3
+      rotate_z: 1
 
   - name: navigate_results
     comment: "Navigate Results"
