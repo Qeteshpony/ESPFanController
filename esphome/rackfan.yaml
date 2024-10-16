@@ -28,6 +28,10 @@ wifi:
 
 web_server:
   
+status_led:
+  pin: 23
+
+
 # initialize PWM outputs
 output:
   - platform: ledc
@@ -51,6 +55,12 @@ output:
     min_power: 0.2
     zero_means_zero: True
     channel: 4
+  - platform: ledc
+    id: pwmled
+    pin: 22
+    frequency: 1220
+    channel: 6
+    
 
 # Map fan entities to outputs
 fan:  
@@ -70,41 +80,59 @@ fan:
     name: "Fan 3"
     restore_mode: RESTORE_DEFAULT_ON
 
+light:
+  # just a power light for now... feel free to use it for whatever
+  - platform: monochromatic
+    output: pwmled
+    id: yellow
+    internal: True
+    restore_mode: ALWAYS_ON
+    
+
 # Add tacho sensors    
 sensor:
   - platform: pulse_counter
     pin: 35
     id: tacho1
     name: "Tacho 1"
-    update_interval: 10s
+    update_interval: 5s
     unit_of_measurement: "RPM"
     state_class: measurement
     accuracy_decimals: 0
     icon: "mdi:speedometer"
     filters: 
-      - multiply: 0.5  # tacho signal triggers twice per rotation
+      - multiply: 0.5 # tacho signal triggers twice per rotation
+      - or:
+        - throttle: 120s # send at least one value every 120 seconds
+        - delta: 20.0 # send immediately if speed changes more than this
   - platform: pulse_counter
     pin: 33
     id: tacho2
     name: "Tacho 2"
-    update_interval: 10s
+    update_interval: 5s
     unit_of_measurement: "RPM"
     state_class: measurement
     accuracy_decimals: 0
     icon: "mdi:speedometer"
     filters: 
-      - multiply: 0.5
+      - multiply: 0.5 # tacho signal triggers twice per rotation
+      - or:
+        - throttle: 120s # send at least one value every 120 seconds
+        - delta: 20.0 # send immediately if speed changes more than this
   - platform: pulse_counter
     pin: 26
     id: tacho3
     name: "Tacho 3"
-    update_interval: 10s
+    update_interval: 5s
     unit_of_measurement: "RPM"
     state_class: measurement
     accuracy_decimals: 0
     icon: "mdi:speedometer"
     filters: 
-      - multiply: 0.5
+      - multiply: 0.5 # tacho signal triggers twice per rotation
+      - or:
+        - throttle: 120s # send at least one value every 120 seconds
+        - delta: 20.0 # send immediately if speed changes more than this
   - platform: wifi_signal
     name: WiFi Signal Strength
     update_interval: 60s
