@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/Qeteshpony/ESPFanController/compare/v1.0.0...v1.1.0) (2024-10-16)
+
+
+### Features
+
+* ESPHome example code ([78cd0e9](https://github.com/Qeteshpony/ESPFanController/commit/78cd0e99160001fed2ef3eddcb27badc424ccddf))
+
 ## 1.0.0 (2024-09-29)
 
 
